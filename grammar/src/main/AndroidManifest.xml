@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".VariableActivity" />
+        <activity android:name=".ArrayActivity" />
+        <activity android:name=".StringActivity" />
+        <activity android:name=".SetOfActivity" />
+        <activity android:name=".ListOfActivity" />
+        <activity android:name=".MapOfActivity" />
+        <activity android:name=".ConditionActivity" />
+        <activity android:name=".RepeatActivity"/>
         <activity android:name=".NullActivity"/>
         <activity android:name=".EqualActivity"/>
         <activity android:name=".FunctionActivity"/>

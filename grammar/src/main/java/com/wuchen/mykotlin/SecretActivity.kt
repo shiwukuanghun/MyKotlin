@@ -32,6 +32,7 @@ class SecretActivity : AppCompatActivity() {
 
         btn_class_enum.setOnClickListener {
             if (count % 2 == 0) {
+                //ordinal表示枚举类型的序号，name表示枚举类型的名称
                 tv_class_secret.text = when (count++ % 4) {
                     SeasonType.SPRING.ordinal -> SeasonType.SPRING.name
                     SeasonType.SUMMER.ordinal -> SeasonType.SUMMER.name
@@ -41,11 +42,14 @@ class SecretActivity : AppCompatActivity() {
                 }
             } else {
                 tv_class_secret.text = when (count++ % 4) {
+                    //使用自定义属性seasonName表示更个性化的描述
                     SeasonName.SPRING.ordinal -> SeasonName.SPRING.seasonName
                     SeasonName.SUMMER.ordinal -> SeasonName.SUMMER.seasonName
                     SeasonName.AUTUMN.ordinal -> SeasonName.AUTUMN.seasonName
                     SeasonName.WINTER.ordinal -> SeasonName.WINTER.seasonName
                     else -> "未知"
+                    //枚举类的构造函数是给枚举类型使用的，外部不能直接调用枚举类的构造函数
+                    //else -> SeasonName("未知").name
                 }
             }
         }
@@ -72,6 +76,7 @@ class SecretActivity : AppCompatActivity() {
         var lotus2 = lotus.copy()
         btn_class_data.setOnClickListener {
             lotus2 = when (count++ % 2) {
+                //copy方法带参数，表示指定参数另外赋值
                 0 -> lotus.copy(flower = "莲花")
                 else -> lotus.copy(flower = "荷花")
             }

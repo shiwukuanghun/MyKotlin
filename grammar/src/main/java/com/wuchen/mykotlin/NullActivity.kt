@@ -55,7 +55,7 @@ class NullActivity : AppCompatActivity() {
             tv_check_result.text = "字符串B的长度为$length"
         }
 
-        var length_null:Int? //声明为可控类型
+        var length_null:Int? //声明为可空类型
         btn_question_dot.setOnClickListener {
             //?.表示对象为空时直接返回null，所以返回值的变量必须被生命为可空类型
             length_null = strB?.length
